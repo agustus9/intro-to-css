@@ -1,12 +1,65 @@
 <!DOCTYPE html>
 <html>
-  <head lang="en">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Intro To Css</title>
-    <link rel="stylesheet" href="/screen.css">
-  </head>
-  <body>
+
+<head lang="en">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Intro To Css</title>
+  <link rel="stylesheet" href="./screen.css">
+
+  <style>
+    /* [selector] {
+        properties: value;
+        properties: value;
+        properties: value;
+        properties: value;        
+      }
+       */
+
+    /*selector by tag*/
+
+    body {
+      background-color: pink;
+      --main-bg-color: green;
+    }
+
+    #notYourHeader {
+      background-color: aquamarine;
+      border: 4px dotted darkblue;
+    }
+
+    #notYourHeader {
+      background-color: var(--main-bg-color);
+    }
+
+    h1 {
+      border: 3px solid var(--main-bg-color);
+    }
+
+    p{
+      color: var(--main-bg-color);
+    }
+
+    /*selector by class*/
+
+    .title-blue {
+      color: blue;
+    }
+
+    /* selector by id */
+  </style>
+
+
+</head>
+
+<body>
+  <header class="title-blue">
     <h1>Hello, World!</h1>
-  </body>
+    <p>This is my sample text</p>
+  </header>
+  <h1>Other </h1>
+  <h1>Something else</h1>
+  <h1 id="notYourHeader">Not your h1!</h1>
+</body>
+
 </html>
